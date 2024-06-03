@@ -1,0 +1,45 @@
+$colors: (
+    primary: (
+        red: hsl(0, 100%, 67%),
+        yellow: hsl(39, 100%, 56%),
+        green: hsl(166, 100%, 37%),
+        blue: hsl(234, 85%, 45%),
+    ),
+
+    gradient: (
+        background-purple: hsl(252, 100%, 67%),
+        background-blue: hsl(241, 81%, 54%),
+        circle-purple: hsla(256, 72%, 46%, 1),
+        circle-blue: hsla(241, 72%, 46%, 0),
+    ),
+
+    neutral: (
+        white: hsl(0, 0%, 100%),
+        pale-blue: hsl(221, 100%, 96%),
+        lavender: hsl(241, 100%, 89%),
+        dark-blue: hsl(224, 30%, 27%),
+    ),
+);
+
+$colors-hsl: (
+    primary: (
+        red: "0, 100%, 67%",
+        yellow: "39, 100%, 56%",
+        green: "166, 100%, 37%",
+        blue: "234, 85%, 45%",
+    ),
+
+    gradient: (
+        background-purple: "252, 100%, 67%",
+        background-blue: "241, 81%, 54%",
+        circle-purple: "256, 72%, 46%, 1",
+        circle-blue: "241, 72%, 46%, 0",
+    ),
+
+    neutral: (
+        white: "0, 0%, 100%",
+        pale-blue: "221, 100%, 96%",
+        lavender: "241, 100%, 89%",
+        dark-blue: "224, 30%, 27%",
+    ),
+);

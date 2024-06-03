@@ -1,0 +1,27 @@
+{
+    "name": "sass-compiler-and-browsersync",
+    "version": "1.0.0",
+    "description": "SASS compile, purge, autoprefix, minimize and live-reload dev server using Browsersync for static HTML",
+    "main": "index.html",
+    "author": "moadavou",
+    "license": "ISC",
+    "scripts": {
+        "build:sass": "sass  --no-source-map scss:./",
+        "watch:sass": "sass  --no-source-map --watch scss:./",
+        "server": "browser-sync start --server --files ./",
+        "purgecss": "purgecss --css *.css --content *.html *.js --output ./",
+        "postcss": "postcss *.css -u autoprefixer cssnano -r --no-map",
+        "start": "run-p watch:* server",
+        "build": "npm-run-all build:* purgecss postcss"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.19",
+        "browser-sync": "^3.0.2",
+        "cssnano": "^7.0.1",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.4.38",
+        "postcss-cli": "^11.0.0",
+        "purgecss": "^6.0.0",
+        "sass": "^1.77.2"
+    }
+}

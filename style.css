@@ -1,0 +1,175 @@
+:root {
+  --clr-primary-red: hsl(var(--clr-primary-red-hsl));
+  --clr-primary-red-hsl: 0, 100%, 67%;
+  --clr-primary-yellow: hsl(var(--clr-primary-yellow-hsl));
+  --clr-primary-yellow-hsl: 39, 100%, 56%;
+  --clr-primary-green: hsl(var(--clr-primary-green-hsl));
+  --clr-primary-green-hsl: 166, 100%, 37%;
+  --clr-primary-blue: hsl(var(--clr-primary-blue-hsl));
+  --clr-primary-blue-hsl: 234, 85%, 45%;
+  --clr-gradient-background-purple: hsl(var(--clr-gradient-background-purple-hsl));
+  --clr-gradient-background-purple-hsl: 252, 100%, 67%;
+  --clr-gradient-background-blue: hsl(var(--clr-gradient-background-blue-hsl));
+  --clr-gradient-background-blue-hsl: 241, 81%, 54%;
+  --clr-gradient-circle-purple: hsl(var(--clr-gradient-circle-purple-hsl));
+  --clr-gradient-circle-purple-hsl: 256, 72%, 46%, 1;
+  --clr-gradient-circle-blue: hsl(var(--clr-gradient-circle-blue-hsl));
+  --clr-gradient-circle-blue-hsl: 241, 72%, 46%, 0;
+  --clr-neutral-white: hsl(var(--clr-neutral-white-hsl));
+  --clr-neutral-white-hsl: 0, 0%, 100%;
+  --clr-neutral-pale-blue: hsl(var(--clr-neutral-pale-blue-hsl));
+  --clr-neutral-pale-blue-hsl: 221, 100%, 96%;
+  --clr-neutral-lavender: hsl(var(--clr-neutral-lavender-hsl));
+  --clr-neutral-lavender-hsl: 241, 100%, 89%;
+  --clr-neutral-dark-blue: hsl(var(--clr-neutral-dark-blue-hsl));
+  --clr-neutral-dark-blue-hsl: 224, 30%, 27%;
+  --fs-400: 1rem;
+  --fs-600: 1.125rem;
+  --fs-700: 1.5rem;
+  --fs-800: 3.5rem;
+}
+@media (min-width: 50rem) {
+  :root {
+    --fs-400: 1.125rem;
+    --fs-600: 1.5rem;
+    --fs-700: 2rem;
+    --fs-800: 4.5rem;
+  }
+}
+
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.text-primary-red {
+  color: hsl(0, 100%, 67%);
+}
+
+.bg-primary-red {
+  background-color: hsl(0, 100%, 67%);
+}
+
+.text-primary-yellow {
+  color: hsl(39, 100%, 56%);
+}
+
+.bg-primary-yellow {
+  background-color: hsl(39, 100%, 56%);
+}
+
+.text-primary-green {
+  color: hsl(166, 100%, 37%);
+}
+
+.bg-primary-green {
+  background-color: hsl(166, 100%, 37%);
+}
+
+.text-primary-blue {
+  color: hsl(234, 85%, 45%);
+}
+
+.bg-primary-blue {
+  background-color: hsl(234, 85%, 45%);
+}
+
+.text-gradient-background-purple {
+  color: hsl(252, 100%, 67%);
+}
+
+.bg-gradient-background-purple {
+  background-color: hsl(252, 100%, 67%);
+}
+
+.text-gradient-background-blue {
+  color: hsl(241, 81%, 54%);
+}
+
+.bg-gradient-background-blue {
+  background-color: hsl(241, 81%, 54%);
+}
+
+.text-gradient-circle-purple {
+  color: hsl(256, 72%, 46%);
+}
+
+.bg-gradient-circle-purple {
+  background-color: hsl(256, 72%, 46%);
+}
+
+.text-gradient-circle-blue {
+  color: hsla(241, 72%, 46%, 0);
+}
+
+.bg-gradient-circle-blue {
+  background-color: hsla(241, 72%, 46%, 0);
+}
+
+.text-neutral-white {
+  color: hsl(0, 0%, 100%);
+}
+
+.bg-neutral-white {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.text-neutral-pale-blue {
+  color: hsl(221, 100%, 96%);
+}
+
+.bg-neutral-pale-blue {
+  background-color: hsl(221, 100%, 96%);
+}
+
+.text-neutral-lavender {
+  color: hsl(241, 100%, 89%);
+}
+
+.bg-neutral-lavender {
+  background-color: hsl(241, 100%, 89%);
+}
+
+.text-neutral-dark-blue {
+  color: hsl(224, 30%, 27%);
+}
+
+.bg-neutral-dark-blue {
+  background-color: hsl(224, 30%, 27%);
+}
