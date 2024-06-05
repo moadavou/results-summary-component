@@ -47,6 +47,7 @@
 /* Remove default margin */
 * {
   margin: 0;
+  padding: 0;
 }
 
 /* 3. Improve media defaults */
@@ -76,6 +77,32 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+body {
+  background-color: var(--clr-neutral-white);
+}
+
+main {
+  display: grid;
+}
+@media (min-width: 50rem) {
+  main {
+    min-height: 100vh;
+    place-content: center;
+  }
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  color: var(--clr-neutral-dark-blue);
+  font-size: var(--fs-400);
+}
+
+/* purgecss ignore */
+:where(.flow > :not(:first-child)) {
+  margin-top: var(--flow-space, 1.5rem);
 }
 
 .text-primary-red {
@@ -172,4 +199,194 @@ h6 {
 
 .bg-neutral-dark-blue {
   background-color: hsl(224, 30%, 27%);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.heading-m {
+  font-weight: 700;
+  font-size: var(--fs-600);
+  line-height: 1;
+}
+
+.heading-l {
+  font-weight: 700;
+  font-size: var(--fs-700);
+  line-height: 1;
+}
+
+.heading-xl {
+  font-weight: 800;
+  font-size: var(--fs-800);
+  line-height: 1;
+}
+
+.grid {
+  display: grid;
+}
+
+.attribution {
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card {
+  --border-radius: 32px;
+  background-color: var(--clr-neutral-white);
+}
+@media (min-width: 50rem) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 46rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 30px 60px hsla(224, 82%, 58%, 0.15);
+  }
+}
+
+.result {
+  background: linear-gradient(to bottom, var(--clr-gradient-background-purple), var(--clr-gradient-background-blue));
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  padding-inline: 57px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  color: var(--clr-neutral-lavender);
+}
+@media (min-width: 50rem) {
+  .result {
+    padding-top: 2.38rem;
+    padding-bottom: 2.89rem;
+    padding-inline: 54px;
+    border-radius: var(--border-radius);
+  }
+}
+
+.result-score {
+  place-content: center;
+  width: 8.75rem;
+  margin-inline: auto;
+  background: linear-gradient(to bottom, var(--clr-gradient-circle-purple), var(--clr-gradient-circle-blue));
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+.result-score span {
+  display: block;
+}
+@media (min-width: 50rem) {
+  .result-score {
+    width: 12.5rem;
+    --flow-space: 2.19rem;
+  }
+}
+
+.result-rank {
+  gap: 0.5rem;
+}
+@media (min-width: 50rem) {
+  .result-rank {
+    gap: 1rem;
+    --flow-space: 1.75rem;
+  }
+}
+
+.summary {
+  padding-top: 1.5rem;
+  padding-bottom: 1.89rem;
+  padding-inline: 30px;
+}
+@media (min-width: 50rem) {
+  .summary {
+    padding-top: 2.38rem;
+    padding-bottom: 2.89rem;
+    padding-inline: 40px;
+  }
+}
+
+.summary-heading {
+  margin-bottom: 1.75rem;
+}
+
+.summary-scores {
+  display: grid;
+  gap: 1rem;
+  list-style-type: none;
+}
+.summary-scores li {
+  display: flex;
+  padding: 1rem;
+  border-radius: 12px;
+}
+.summary-scores img {
+  width: 20px;
+  aspect-ratio: 1;
+  margin-right: 0.75rem;
+}
+.summary-scores li:nth-child(1) {
+  background-color: hsla(var(--clr-primary-red-hsl), 0.05);
+}
+.summary-scores li:nth-child(1) .summary-scores__item-category {
+  color: var(--clr-primary-red);
+}
+.summary-scores li:nth-child(2) {
+  background-color: hsla(var(--clr-primary-yellow-hsl), 0.05);
+}
+.summary-scores li:nth-child(2) .summary-scores__item-category {
+  color: var(--clr-primary-yellow);
+}
+.summary-scores li:nth-child(3) {
+  background-color: hsla(var(--clr-primary-green-hsl), 0.05);
+}
+.summary-scores li:nth-child(3) .summary-scores__item-category {
+  color: var(--clr-primary-green);
+}
+.summary-scores li:nth-child(4) {
+  background-color: hsla(var(--clr-primary-blue-hsl), 0.05);
+}
+.summary-scores li:nth-child(4) .summary-scores__item-category {
+  color: var(--clr-primary-blue);
+}
+
+.summary-scores__item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-scores__item-score {
+  font-weight: 700;
+}
+.summary-scores__item-score span {
+  opacity: 50%;
+}
+
+.button {
+  position: relative;
+  width: 100%;
+  padding-block: 1rem;
+  margin-top: 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 128px;
+  background-image: linear-gradient(var(--clr-gradient-background-purple), var(--clr-gradient-background-blue), var(--clr-neutral-dark-blue), var(--clr-neutral-dark-blue));
+  background-size: 1px 140px;
+  background-position: bottom;
+  color: var(--clr-neutral-white);
+  font-weight: 700;
+  transition: background-position 300ms ease;
+}
+@media (min-width: 50rem) {
+  .button {
+    margin-top: 2.56rem;
+  }
+}
+
+.button:hover,
+.button:focus {
+  background-position: top;
 }

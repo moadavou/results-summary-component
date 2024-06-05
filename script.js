@@ -15,10 +15,10 @@ fetch("./data.json")
         data.map((element) => {
             let list = document.createElement("li");
             list.innerHTML = `
-            <img src="${element.icon}">
-            <div>
-            <p class="summary-scores__category">${element.category}</p>
-            <p class="summary-scores__score"><span>${element.score}</span> / 100</p>
+            <img src="${element.icon}" alt="">
+            <div class="summary-scores__item">
+            <p class="summary-scores__item-category">${element.category}</p>
+            <p class="summary-scores__item-score">${element.score}<span> / 100</span></p>
             </div>`;
             scores.appendChild(list);
 

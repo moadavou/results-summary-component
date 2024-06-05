@@ -1,0 +1,4 @@
+/* purgecss ignore */
+:where(.flow > :not(:first-child)) {
+    margin-top: var(--flow-space, 1.5rem);
+}

@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+body {
+    background-color: var(--clr-neutral-white);
+}
+
+main {
+    display: grid;
+
+    @include breakpoint {
+        min-height: 100vh;
+        place-content: center;
+    }
+}

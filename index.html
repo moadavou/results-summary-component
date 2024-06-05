@@ -12,20 +12,32 @@
 
         <title>Frontend Mentor | Results summary component</title>
 
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+
         <!-- CSS -->
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <main>
-            <div class="[ card ]">
-                <div class="[ result ]">
-                    <h1>Your Result</h1>
-                    <p class="[ result-score ]">
-                        <span id="total-score"></span>of 100
+            <div class="[ card ] [ grid ]">
+                <div class="[ result ] [ flow ] [ text-center ]">
+                    <h1 class="[ heading-m ]">Your Result</h1>
+                    <p class="[ result-score ] [ grid ]">
+                        <span
+                            class="[ heading-xl ] [ text-neutral-white ]"
+                            id="total-score"></span
+                        >of 100
                     </p>
 
-                    <div>
-                        <p class="[ result-rank ]">Great</p>
+                    <div class="[ result-rank ] [ grid ]">
+                        <p class="[ heading-l ] [ text-neutral-white ]">
+                            Great
+                        </p>
                         <p>
                             You scored higher than 65% of the people who have
                             taken these tests.
@@ -34,7 +46,7 @@
                 </div>
 
                 <div class="[ summary ]">
-                    <h2>Summary</h2>
+                    <h2 class="[ summary-heading ] [ heading-m ]">Summary</h2>
                     <ul class="[ summary-scores ]" id="scores"></ul>
                     <button class="button">Continue</button>
                 </div>

@@ -1,0 +1,25 @@
+.text-center {
+    text-align: center;
+}
+
+.heading-m {
+    font-weight: 700;
+    font-size: var(--fs-600);
+    line-height: 1;
+}
+
+.heading-l {
+    font-weight: 700;
+    font-size: var(--fs-700);
+    line-height: 1;
+}
+
+.heading-xl {
+    font-weight: 800;
+    font-size: var(--fs-800);
+    line-height: 1;
+}
+
+.grid {
+    display: grid;
+}

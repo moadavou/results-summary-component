@@ -1,0 +1,145 @@
+@use "../abstracts/" as *;
+
+.card {
+    --border-radius: 32px;
+
+    background-color: var(--clr-neutral-white);
+
+    @include breakpoint {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 46rem;
+        border-radius: var(--border-radius);
+        box-shadow: 0px 30px 60px hsla(224, 82%, 58%, 0.15);
+    }
+}
+
+.result {
+    background: linear-gradient(
+        to bottom,
+        var(--clr-gradient-background-purple),
+        var(--clr-gradient-background-blue)
+    );
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-inline: 57px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    color: var(--clr-neutral-lavender);
+
+    @include breakpoint {
+        padding-top: 2.38rem;
+        padding-bottom: 2.89rem;
+        padding-inline: 54px;
+        border-radius: var(--border-radius);
+    }
+}
+
+.result-score {
+    place-content: center;
+    width: 8.75rem;
+    margin-inline: auto;
+    background: linear-gradient(
+        to bottom,
+        var(--clr-gradient-circle-purple),
+        var(--clr-gradient-circle-blue)
+    );
+    border-radius: 50%;
+    aspect-ratio: 1;
+
+    span {
+        display: block;
+    }
+
+    @include breakpoint {
+        width: 12.5rem;
+        --flow-space: 2.19rem;
+    }
+}
+
+.result-rank {
+    gap: 0.5rem;
+
+    @include breakpoint {
+        gap: 1rem;
+        --flow-space: 1.75rem;
+    }
+}
+
+.summary {
+    padding-top: 1.5rem;
+    padding-bottom: 1.89rem;
+    padding-inline: 30px;
+
+    @include breakpoint {
+        padding-top: 2.38rem;
+        padding-bottom: 2.89rem;
+        padding-inline: 40px;
+    }
+}
+
+.summary-heading {
+    margin-bottom: 1.75rem;
+}
+
+.summary-scores {
+    display: grid;
+    gap: 1rem;
+    list-style-type: none;
+
+    li {
+        display: flex;
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    img {
+        width: 20px;
+        aspect-ratio: 1;
+        margin-right: 0.75rem;
+    }
+
+    li:nth-child(1) {
+        background-color: hsla(var(--clr-primary-red-hsl), 0.05);
+
+        & .summary-scores__item-category {
+            color: var(--clr-primary-red);
+        }
+    }
+
+    li:nth-child(2) {
+        background-color: hsla(var(--clr-primary-yellow-hsl), 0.05);
+
+        & .summary-scores__item-category {
+            color: var(--clr-primary-yellow);
+        }
+    }
+
+    li:nth-child(3) {
+        background-color: hsla(var(--clr-primary-green-hsl), 0.05);
+
+        & .summary-scores__item-category {
+            color: var(--clr-primary-green);
+        }
+    }
+
+    li:nth-child(4) {
+        background-color: hsla(var(--clr-primary-blue-hsl), 0.05);
+
+        & .summary-scores__item-category {
+            color: var(--clr-primary-blue);
+        }
+    }
+}
+
+.summary-scores__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-scores__item-score {
+    font-weight: 700;
+
+    span {
+        opacity: 50%;
+    }
+}
