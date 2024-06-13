@@ -1,13 +1,6 @@
 @use "../abstracts" as *;
 
 :root {
-    // Create hsl color variables from abstracts/colors
-    // @each $color, $shades in $colors-hsl {
-    //     @each $shade, $value in $shades {
-    //         --clr-#{$color}-#{$shade}-hsl: #{$value};
-    //     }
-    // }
-
     // Create color variables from abstracts/colors
     @each $color, $shades in $colors-hsl {
         @each $shade, $value in $shades {
